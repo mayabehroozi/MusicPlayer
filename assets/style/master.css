@@ -1,0 +1,149 @@
+/* <i class="fa-solid fa-forward"></i> */
+/* <i class="fa-solid fa-backward"></i> */
+/* <i class="fa-solid fa-play"></i> */
+/* <i class="fa-solid fa-pause"></i> */
+
+
+@font-face {
+    font-family:maya ;
+    src: url(../font/CascadiaCode-Italic-VariableFont_wght.ttf);
+}
+body{
+    font-family: maya;
+    /* background-image: url(../img/bg.jpg); */
+    background: url(../img/bg.jpg);
+ backdrop-filter: blur(8px);
+    background-size: 190%;
+    background-repeat: no-repeat;
+    animation:anim 120s forwards infinite alternate;;
+   
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  /* padding-bottom: 50px; */
+  /* border: 2px solid yellow; */
+}
+.swiper-wrapper{
+    /* border: 2px solid red; */
+    margin: 50px auto;
+}
+.swiper-slide {
+  width: 20%; /* هر اسلاید کمتر از عرض کل باشه تا همه جا بشن */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* .bg-blur {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px);
+  opacity: 0.6;
+  z-index: 0;
+  display: none;
+  mask-image: linear-gradient(to right, black, transparent);
+  -webkit-mask-image: linear-gradient(to right, black, transparent);
+} */
+
+.swiper-slide-active .bg-blur {
+  display: block;
+}
+
+.main-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.music_player{
+  width: 500px;
+  height: 40vh;
+  /* border: 2px solid wheat; */
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  *{
+    display: flex;
+    justify-content: center;
+    color: rgba(245, 222, 179, 0.555);
+  }
+  
+  h1{
+    width: 100%;
+  
+  }
+  >P{
+    width: 100%;
+ 
+  }
+  >input{
+    width: 80%;
+    margin: 0 auto;
+
+
+  }
+}
+
+.controls{
+  width: 400px;
+  margin: 20px auto;
+  min-height: 30px;
+  /* border: 2px solid darkgoldenrod; */
+  display: flex;
+ align-items: center;
+ 
+}
+span{
+   width: 50px;
+  height: 50px;
+  border:2px solid rgba(245, 222, 179, 0.404);
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin-inline: 5px;
+}
+.play-puse{
+   width: 60px;
+  height: 60px;
+
+}
+
+.hide{
+  opacity: 0;
+  visibility: hidden;
+}
+.show{
+  opacity: 1;
+  visibility:visible;
+}
+
+@keyframes anim{
+  0%, 100% {
+    background-position: 20% 0%;
+    background-size: 3400px;
+}
+
+50% {
+    background-position: 100% 0%;
+    background-size: 2400px;
+}}
